@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moemen kasa7</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <video loop id="background-video">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+
+  <div class="black-overlay"></div>
+
+  <div id="start-screen" class="start-screen">
+    <button id="start-button" class="start-button"><3 </button>
+  </div>
+
+  <section>
+    
+    <div id="content" class="content" style="display: none;">
+      <div class="filter" id="filter">
+      <img src="WhatsApp Image 2025-05-30 at 11.15.48_d500d313.jpg" alt="Profile Picture" class="profile-pic">
+      <h1>Moemen kasa7</h1>
+      <p class="desc">Just a Lil peep en</p>
+
+      <!-- Discord Status Banner -->
+      <div class="lanyard-banner">
+        <a href="https://discord.com/users/700519173532680233" target="_blank">
+          <img src="https://lanyard.cnrad.dev/api/700519173532680233" alt="Profil Discord" />
+        </a>
+      </div>
+
+      <div class="badges">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-cog"></i>
+      </div>
+
+      <div class="socials">
+        <a href="https://discord.com/users/700519173532680233" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://open.spotify.com/user/31yqy4jzajpruztw6dwar5rfxzoq" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.instagram.com/gh_moemen/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const startButton = document.getElementById('start-button');
+      const startScreen = document.getElementById('start-screen');
+      const content = document.getElementById('content');
+      
+      const video = document.getElementById('background-video');
+      const blackOverlay = document.querySelector('.black-overlay');
+
+      startButton.addEventListener('click', () => {
+        startScreen.style.display = 'none';
+        blackOverlay.style.display = 'none';
+        
+        content.style.display = 'block';
+        video.style.display = 'block';
+        video.muted = false;
+        video.play().catch(e => console.log("Erreur vidÃ©o:", e));
+      });
+    });
+  </script>
+</body>
+</html>
